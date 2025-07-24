@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Semisonic;
+    src: url("static/fonts/Semisonic.ttf") format('truetype');
+}
+@font-face {
+    font-family: CaviarDreams;
+    src: url("static/fonts/CaviarDreams.ttf") format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: CaviarDreamsBold;
+    src: url("static/fonts/CaviarDreams_Bold.ttf") format('truetype');
+    font-style: bold;
+}

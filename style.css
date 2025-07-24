@@ -1,7 +1,49 @@
+@import url("fontfaces.css");
+
 body{
-    background-color: #ffffc7;
-    font-family: Arial, sans-serif;
+    background-color: #4290e0;
+    font-family: CaviarDreams;
     color: #333;
     margin: 0;
-    padding: 20px;
 }
+
+.navBar{
+    text-align: center;
+    background-color: white;
+}
+
+.navBar ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+.navBar a{
+    display: block;
+    text-align: center;
+    padding: 15px;
+}
+
+.navBar a:hover{
+    background-color: black;
+    /* this is jsut filler */
+}
+
+.navBar li{
+    float: left;
+}
+
+.mainBanner{
+    font-family: Semisonic;
+}
+
+.topDiv{
+    position: static;    
+}
+
+.metronomeButtons{
+    background-color: #333;
+    opacity: 70%;
+    border-radius: 0%;
+    box-shadow: none;
+    align-content: center;
+}
+
