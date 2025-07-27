@@ -29,6 +29,8 @@
             <button class="metronomeButtons" onclick={metBPM(false)}> - </button>
             <button class="metronomeButtons" onclick={metronomeSound()}> || </button>
             <button class="metronomeButtons" onclick={metBPM(true)}> + </button>
+
+            <p id="pStatus"></p>
         </div>
         
         
@@ -37,6 +39,11 @@
 
 
         <script>
+            var metronomeTick = new Audio('static/sound/metTick.mp3');
+            var tickingPlaying = false;
+            var currentBPM = document.getElementById('bpmNum').innerHTML;
+            console.log(currentBPM);
+
             function metBPM(x){ // this function's to change the bpm
                 if (x == true){
                     document.getElementById('bpmNum').innerHTML++;
@@ -45,9 +52,7 @@
                     document.getElementById('bpmNum').innerHTML--; // it's so weird not using a strongly typed language huh
                 }
             }
-
-            var metronomeTick = new Audio('static/sound/metTick.mp3');
-            let tickingPlaying = false;
+            
             function metronomeSound(){ // this function's to play the beat
                 if (tickingPlaying == true){
                     tickingPlaying = false;
@@ -55,11 +60,12 @@
                 else if (tickingPlaying == false){
                     tickingPlaying = true;
                 }
-                while (tickingPlaying == true){ 
-                    metronomeTick.play();
-                }
+                
             }
-
+            while(tickingPlaying == true){
+                setInterval(metronomeTick.play(), 1000);
+            }
+            
             
         </script>
         <script src="prereqs.js" async defer></script>
