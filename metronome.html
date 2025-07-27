@@ -17,7 +17,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- to put in the  -->
+        <!-- this is the nav bar division -->
         <div>
 
         </div>
@@ -27,15 +27,14 @@
                 60
             </p>
             <button class="metronomeButtons" onclick={metBPM(false)}> - </button>
-            <button class="metronomeButtons" onclick={}> || </button>
+            <button class="metronomeButtons" onclick={metronomeSound()}> || </button>
             <button class="metronomeButtons" onclick={metBPM(true)}> + </button>
-
         </div>
-        
         
         
         <link rel="stylesheet" href="style.css">
         <!-- <script src="" async defer></script> -->
+
 
         <script>
             function metBPM(x){ // this function's to change the bpm
@@ -46,10 +45,23 @@
                     document.getElementById('bpmNum').innerHTML--; // it's so weird not using a strongly typed language huh
                 }
             }
-            function metronomeSound(y){ // this function's to play the beat
-                let 
+
+            var metronomeTick = new Audio('static/sound/metTick.mp3');
+            let tickingPlaying = false;
+            function metronomeSound(){ // this function's to play the beat
+                if (tickingPlaying == true){
+                    tickingPlaying = false;
+                }
+                else if (tickingPlaying == false){
+                    tickingPlaying = true;
+                }
+                while (tickingPlaying == true){ 
+                    metronomeTick.play();
+                }
             }
 
+            
         </script>
+        <script src="prereqs.js" async defer></script>
     </body>
 </html>
