@@ -1,0 +1,27 @@
+/* stylesheet exclusive to metronome page */
+
+.metronomeButtons{
+    background-color: #006774;
+    opacity: 70%;
+    border-radius: 0%;
+    box-shadow: none;
+    align-content: center;
+    padding: 15px;
+    border: 1px solid #FEE0E0;
+    border-radius: 11px;
+    box-sizing: border-box;
+}
+
+.metronomeButtons:hover{
+    background-color: #D33A2C;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+    color: #FFFFFF;
+}
+
+#bpmNum{
+    display: block;
+}
+.metDiv{
+    align-content: center;
+    
+}

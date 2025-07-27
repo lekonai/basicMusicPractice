@@ -1,7 +1,7 @@
 @import url("fontfaces.css");
 
 body{
-    background-color: #4290e0;
+    background-color: #DEFBFF;
     font-family: CaviarDreams;
     color: #333;
     margin: 0;
@@ -39,11 +39,8 @@ body{
     position: static;    
 }
 
-.metronomeButtons{
-    background-color: #333;
-    opacity: 70%;
-    border-radius: 0%;
-    box-shadow: none;
-    align-content: center;
+.topDiv{
+    top: 0;
+    left: 0;
 }
 

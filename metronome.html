@@ -22,22 +22,15 @@
 
         </div>
 
-        <div>
+        <div class = "metDiv">
             <p id="bpmNum">
                 60
             </p>
             <button class="metronomeButtons" onclick={metBPM(false)}> - </button>
             <button class="metronomeButtons" onclick={metronomeSound()}> || </button>
             <button class="metronomeButtons" onclick={metBPM(true)}> + </button>
-
             <p id="pStatus"></p>
         </div>
-        
-        
-        <link rel="stylesheet" href="style.css">
-        <!-- <script src="" async defer></script> -->
-
-
         <script>
             var metronomeTick = new Audio('static/sound/metTick.mp3');
             var tickingPlaying = false;
@@ -53,21 +46,29 @@
                 }
             }
             
-            function metronomeSound(){ // this function's to play the beat
-                if (tickingPlaying == true){
-                    tickingPlaying = false;
-                }
-                else if (tickingPlaying == false){
-                    tickingPlaying = true;
-                }
-                
+            function metronomeSound(){
+                metronomeTick.play(); // test function
             }
-            while(tickingPlaying == true){
-                setInterval(metronomeTick.play(), 1000);
-            }
+            // function metronomeSound(){ // this function's to play the beat
+            //     if (tickingPlaying == true){
+            //         tickingPlaying = false;
+            //     }
+            //     else if (tickingPlaying == false){
+            //         tickingPlaying = true;
+            //     }
+            //     play(tickingPlaying);
+            // }
+            // function play(x){
+            //     while(x == true){
+            //     setInterval(metronomeTick.play(), 1000);
+            // }
+            
             
             
         </script>
-        <script src="prereqs.js" async defer></script>
+        
+        <link rel="stylesheet" href="metStyl.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="prereqs.js" defer></script> 
     </body>
 </html>
