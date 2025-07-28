@@ -10,7 +10,9 @@
         <title>Metronome</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="metStyl.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="prereqs.js" defer></script> 
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -46,29 +48,24 @@
                 }
             }
             
-            function metronomeSound(){
-                metronomeTick.play(); // test function
+            function metronomeSound(){ // this function's to play the beat
+                if (tickingPlaying == true){
+                    tickingPlaying = false;
+                }
+                else if (tickingPlaying == false){
+                    tickingPlaying = true;
+                }
+                play(tickingPlaying);
             }
-            // function metronomeSound(){ // this function's to play the beat
-            //     if (tickingPlaying == true){
-            //         tickingPlaying = false;
-            //     }
-            //     else if (tickingPlaying == false){
-            //         tickingPlaying = true;
-            //     }
-            //     play(tickingPlaying);
-            // }
-            // function play(x){
-            //     while(x == true){
-            //     setInterval(metronomeTick.play(), 1000);
-            // }
+            function play(x){
+                while(x == true){
+                setInterval(metronomeTick.play(), 1000);
+                }
+            }
             
             
             
         </script>
         
-        <link rel="stylesheet" href="metStyl.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="prereqs.js" defer></script> 
     </body>
 </html>
