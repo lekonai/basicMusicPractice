@@ -18,9 +18,19 @@
     color: #FFFFFF;
 }
 
-#bpmNum{
+/* #bpmNum{
     display: block;
-}
+} */
+
+/* keep in case the textarea idea doesn't work */
 .metDiv{
     align-content: center;
+}
+
+#bpmNum{
+    resize: none;
+    font-size: 20px;
+    background: none;
+    border: none;
+    text-align: center;
 }
