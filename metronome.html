@@ -28,7 +28,9 @@
             <!-- <p id="bpmNum">
                 60
             </p> -->
-            <textarea id="bpmNum" rows="1" cols="10">60</textarea>
+            <textarea id="bpmNum" rows="1" cols="10" maxlength="3" minlength="1">
+                60
+            </textarea>
             <!-- there's no inherent resize property? okay. -->
             <button class="metronomeButtons" onclick={metBPM(false)}> - </button>
             <button class="metronomeButtons" onclick={metronomeSound()}> || </button>
