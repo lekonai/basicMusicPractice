@@ -9,9 +9,20 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+        <!-- top navigation bar div -->
+        <div>
+            <label for="pdfF">Select PDF File:</label>
+            <input id = "pdfF" type="file" name="pdfF" accept=".pdf">
+            <button id = "pdfS" onclick={embed()}>Submit File</button>
+        </div>
         <div>
             <p>hello there, this is the pdf collection section.</p>
         </div>
+        <div id="embedSection">
+            <!-- for PDFs -->
+
+        </div>
         <link rel="stylesheet" href="style.css">
+        <script src="pdfDisplay.js"></script>
     </body>
 </html>

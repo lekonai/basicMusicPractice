@@ -33,48 +33,12 @@
             </textarea>
             <!-- there's no inherent resize property? okay. -->
             <button class="metronomeButtons" onclick={metBPM(false)}> - </button>
-            <button class="metronomeButtons" onclick={metronomeSound()}> || </button>
+            <button class="metronomeButtons" onclick={metronomeTrigger()}> || </button>
             <button class="metronomeButtons" onclick={metBPM(true)}> + </button>
             <p id="pStatus"></p>
             
         </div>
-        <script>
-            var metronomeTick = new Audio('static/sound/metTick.mp3');
-            var tickingPlaying = false;
-            var currentBPM = document.getElementById('bpmNum').innerHTML;
-            console.log(currentBPM);
-
-            function metBPM(x){ // this function's to change the bpm
-                if (x == true){
-                    document.getElementById('bpmNum').innerHTML++;
-                    currentBPM = document.getElementById('bpmNum').innerHTML;
-                    console.log(currentBPM); // test
-                }
-                else {
-                    document.getElementById('bpmNum').innerHTML--; // it's so weird not using a strongly typed language huh
-                    currentBPM = document.getElementById('bpmNum').innerHTML;
-                    console.log(currentBPM); // test
-                }
-            }
-            
-            function metronomeSound(){ // this function's to play the beat DO NOT RUN THIS IT WILL CRASH YOUR COMPUTER LOOOOL 
-                if (tickingPlaying == true){
-                    tickingPlaying = false;
-                }
-                else if (tickingPlaying == false){
-                    tickingPlaying = true;
-                }
-                play(tickingPlaying);
-            }
-            function play(x){
-                while(x == true){
-                setInterval(metronomeTick.play(), 1000);
-                }
-            }
-            
-            
-            
-        </script>
+        <script src="metronomeFunctions.js"></script>
         
     </body>
 </html>
